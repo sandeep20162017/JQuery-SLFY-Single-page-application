@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        .modal-about .modal-dialog {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .modal-about .modal-content {
+            height: auto;
+            min-height: 100%;
+            border-radius: 0;
+        }
+
+    </style>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="en">
+
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aptitude Baba, Best Aptitude test Preparation in amritsar, Prepration for Bank PO, Campus Placement</title>
+    <meta name="description" content="Aptitude Baba, Best Aptitude test Preparation in amritsar, Prepration for Bank PO, Campus Placement">
+    <meta name="document-type" content="Public">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/compiledIndex.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+   <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/responsive.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jqueryCompiledIndex.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <style>
+        #fp-nav ul li a span{
+            background: var(--red-color);
+        }
+        #fp-nav ul li .fp-tooltip{
+            color:var(--red-color);
+            font-family:Rockwell;
+            font-size:16px;
+            font-weight:600;
+        }
+    </style>
+
+</head>
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+
+        $(document).on('click', '#more', function(e){
+
+            e.preventDefault();
+
+            var aid = $(this).data('id'); // get id of clicked row
+
+            $('#article_data').html(''); // leave this div blank
+
+
+            $.ajax({
+                url: 'article_ajax.php',
+                type: 'POST',
+                data: 'id='+aid,
+                dataType: 'html'
+            })
+                .done(function(data){
+                    console.log(data);
+                    $('#article_data').html(''); // blank before load.
+                    $('#article_data').html(data); // load here
+
+                })
+                .fail(function(){
+                    $('#article_data').html('<i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...');
+
+                });
+
+        });
+    });
+</script>
+<div class="modal fade scrollable-element" id="article_modal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+               
+            </div>
+            <div class="modal-body">
+                <div id="article_data"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="menu-collapsed">
+    <div class="bar"></div>
+
+    <nav>
+        <ul>
+            <li><a href="homepage.php#firstPage" id="im"
+                   title="Aptitude Baba, Best Aptitude test Preparation in amritsar, Prepration for Bank PO, Campus Placement">
+                    <img src="images/menu-logo.png" class="menuLogo" alt="Gre Baba"></a></li>
+            <li style="font-size:1em"><a href="homepage.php#firstPage">HOME</a></li>
+            <li style="font-size:1em"><a href="homepage.php#secondPage">ABOUT US</a></li>
+            <li style="font-size:1em"><a href="homepage.php#thirdPage">PROGRAMS</a></li>
+            <!--<li style="font-size:1em"><a href="vocabshow.php">THE VOCAB SHOW</a></li>-->
+            <li style="font-size:1em"><a href="homepage.php#fourthPage">CAREERS</a></li>
+            <li style="font-size:1em"><a href="homepage.php#fifthPage">BABA GYAN</a></li>
+            <li style="font-size:1em"><a href="homepage.php#lastPage">CONTACT US</a></li>
+            <div class="col-sm-12">
+                <div class="menu-social-icons">
+                    <a href="https://www.facebook.com/BabaAptitude/" target="_blank"><img src="images/fb_menu.png"> </a>
+                    <a href="http://fb.me/msg/babaaptitude" target="_blank"><img src="images/messenge_rmenu.png"> </a>
+                    <a href="https://www.instagram.com/aptitudebaba/" target="_blank"><img src="images/instagram_menu.png">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UChBa_Sgj_VnJlihX_Z-11tw" target="_blank"><img
+                                src="images/youtube_menu.png" width="30" height="30"> </a>
+                </div>
+            </div>
+        </ul>
+
+    </nav>
+
+
+</div>
+<style>
+
+    ul {
+        margin-top: 10%;
+    }
+
+    ul > li img {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 20px;
+    }
+
+    ul li a#im {
+        border-bottom: none !important;
+        cursor: pointer;
+
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .b-a, .bar, .bar:before, .bar:after {
+        transition: all .25s;
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 30px;
+        border-radius: 15px;
+        background-color: var(--red-color);
+    }
+
+    .menu-collapsed {
+        transition: all .25s;
+        position: fixed;
+        top: 10px;
+        right: 3%;
+        height: 36px;
+        width: 36px;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .menu-collapsed ul {
+        transition: all 0s;
+        position: fixed;
+        right: 9000px;
+    }
+
+    .bar {
+        float: right;
+        top: 35px;
+        right: 4%;
+    }
+
+    .bar:before {
+        top: -8px;
+    }
+
+    .bar:after {
+        top: 8px;
+    }
+
+    .b-a-expanded, .menu-expanded .bar:before, .menu-expanded .bar:after {
+        transition: all .25s;
+        top: -0px;
+    }
+
+    .menu-expanded {
+        transition: all .25s;
+        text-align: center;
+        line-height: 30px;
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.90);
+        z-index: 510;
+    }
+
+    .menu-expanded ul {
+        transition: all 0s;
+        position: relative;
+        left: 0;
+        z-index: 2;
+    }
+
+    .menu-expanded a {
+        transition: all .15s;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 5px;
+        color: #fff;
+    }
+
+    .menu-expanded a:hover {
+        transition: all .15s;
+        letter-spacing: 0px;
+        border-bottom: 1px solid rgb(255, 255, 255);
+    }
+
+    .menu-expanded .bar {
+        background-color: transparent;
+        transition: all .25s;
+    }
+
+    .menu-expanded .bar:before {
+        transform: rotate(45deg);
+    }
+
+    .menu-expanded .bar:after {
+        transform: rotate(-45deg);
+    }
+
+
+</style>
+<script>
+    $(".menu-collapsed").click(function () {
+        $(this).toggleClass("menu-expanded");
+    });
+</script><body class="fp-viewing-0">
+<style>
+    /*.no-js #loader { display: none;  }
+    .js #loader { display: block; position: absolute; left: 100px; top: 0; }*/
+    .se-pre-con {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url(images/spinner.gif) center no-repeat #fff;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $('#video_modal').modal('show');
+        $('video').on('ended', function () {
+            $('#video_modal').modal('hide');
+        });
+    });
+
+</script>
+
+<div class="modal fade scrollable-element" id="video_modal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title text-center">SSC CGL Pinnacle Coaching</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <video controls autoplay src="images/What Happens In One Minute.mp4"></video>
+                <p class="text-center"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/feedback-form.js"></script>
+<div id="mrova-img-control"><span>Quick Enquiry</span></div>
+<div id="mrova-feedback">
+    <div id="mrova-form">
+        <div class="quickEnquiryStrip text-center ">
+            Call +91 98 88 870560 or Fill the form below:
+        </div>
+
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10 col-xs-12">
+                <h3 class="text-center" style="margin-top:20px;margin-bottom: 25px;">Quick Enquiry</h3>
+
+                <form id="mrova-contactform" action="contact_action.php" class="form-horizontal" method="post">
+                    <div class="form-group row">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <label for="program">Program *</label>
+                            <select name="program" required id="program" class="form-control">
+                                <option value="">Choose One</option>
+                                <option>LEVIATHAN</option>
+                                <option>HELLFIRE</option>
+                                <option>VERBAL BLITZ</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <label for="name">Your Name*</label> <input type="text" name="name" required="required"
+                                                                        class="form-control"
+                                                                        id="name1" value="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <label for="mobile">Mobile*</label>
+                            <input type="number" name="mobile" required id="mobile1" class="form-control"/>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <label for="email">Email*</label> <input type="email" name="email" required
+                                                                     class="form-control"
+                                                                     id="email1"
+                                                                     value="">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label for="univ_college">University / College*</label>
+                            <input type="text" required name="univ_college" id="univ_college1" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Send" id="mrova-sendbutton" class="btn btn-info"
+                               name="mrova-sendbutton">
+                        <input type="button" value="Cancel" id="mrova-Cancelbutton" class="btn btn-info cancel"
+                               name="mrova-sendbutton">
+
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="modal fade scrollable-element" id="readmore" role="dialog" style="position:absolute;">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title">
+                    ABOUT Aptitude Baba
+                </h2>
+            </div>
+            <div class="modal-body scrollable-element">
+                <div class="col-sm-4 col-xs-4">
+                    <img src="images/about_pic.jpg" class="img img-responsive">
+                </div>
+                <div class="col-sm-8"><h6 style="text-align: justify;"><b>Aptitude BABA</b> is an Educational Multimedia
+                        Company based in Amritsar that specializes in APTITUDE Preparation. It is focused on providing
+                        an enhanced educational experience to students by leveraging technology. At <b>Aptitude BABA</b>
+                        we enable individuals to realize their potential and achieve their dreams. This is our core
+                        ideology and is firmly grounded on our focus on academic excellence, technological innovation,
+                        and deep rooted domain expertise. <b>Aptitude BABA</b> is the Brain Child of Rishabh Arora. <b>Aptitude
+                            BABA</b> is his second venture, before this he started with <b>GREKEY</b> in the year 2015.
+                        GREKEY is a GRE Preparation institute which in a period of about two years established itself as
+                        the leading Center for GRE Preparation in Amritsar. For Year 2016 GREKEY accounts for about 75%
+                        of all 310+ GRE Results in Amritsar. We here at <b>Aptitude BABA</b> plan to emulate such
+                        success in all Aptitude based exams, with our prime focus being on Campus Placements, Banking
+                        Jobs, SSC and other Government Jobs.</h6></div>
+                <hr>
+                <div class="row about">
+
+                    <div class="col-sm-12 col-md-12 col-xs-12">
+                        <h5>What makes us Different...?</h5>
+                        <h5>1) The most important difference is the philosophy of our Work:</h5>
+                        <h5 class="text-center">“A student never fails, a teacher does”</h5>
+                        <p class="text-justify">Our Work ethic is remarkably different from any other Aptitude
+                            Preparation institute; we believe that if a student does not improve on scores then it is
+                            our moral failure than the failure of the student. While others grade themselves by the
+                            success of their best students, our performance parameter is the improvement of our weakest
+                            students.</p>
+
+
+                        <h5>2) Special Focus on English:</h5>
+                        <p class="text-justify">While others leave Vocabulary preparation to God’s Mercy we here at <b>
+                                Aptitude Baba</b> have created <b>VISUAL DICTIONARY</b>. It is a collection of 1500+
+                            Words which are repeated in SSC and Bank PO exams. This tool actually comes close to being a
+                            God, as the recall value of this method is almost 95%. </p>
+
+                        <h5>4) Most comprehensive Program:</h5>
+                        <p class="text-justify">Our curriculum covers 8,000+ questions of Maths, Reasoning and English.
+                            This level of detail ensures that the student is able to absolutely master every concept and
+                            is ready to crack every god damn aptitude exam. (With an exception of CAT and XAT)</p>
+                        <p class="text-justify">While most others offer a curriculum of one Lecture every day lasting
+                            for about 12 weeks, our flagship program called "<b>LEVIATHAN</b>" provides two lectures of
+                            1.5 Hours each everyday for about 12 weeks. To know more about our Various Programs head on
+                            the PROGRAMS.</p>
+
+                        <h5>5) Active Use of Video Library*:</h5>
+                        <p class="text-justify">We at Aptitude baba are also developing a massive Video library which
+                            would help augment doubt solving sessions for students. Just imagine holding your phone
+                            towards the worksheet and a video popping out that explains the same question you have been
+                            struck at.</p>
+                        <p class="text-justify">* Video Library is under development and will be available to students
+                            on ad hoc basis to complement lectures delivered in class. It is a revision /doubt clearing
+                            tool only and by no means intends to replace classroom lectures.</p>
+                    </div>
+
+                </div>
+                <div class="col-sm-12 team">
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 team-grid team-grid1"
+                         style="text-align: center;">
+                        <img src="images/founder.jpg" class="img img-responsive img-circle"
+                             alt=" "/>
+                        <h5>Rishabh Arora</h5>
+
+                    </div>
+                    <div class="col-md-10 col-sm-10 team-grid team-grid2">
+                        <p>A computer science engineer who was given the sobriquet ‘Scientist’ by his schoolmates owing
+                            to his penchant for going in depth of every concept. In his School he was a typical Nerd, he
+                            just loved learning and his love for learning was so great that he never missed school. His
+                            school awarded with a silver medal for a unique achievement- Holding full Attendance for
+                            Four Consecutive years. He holds Leonardo Da Vinci as his role model for learning and
+                            believes in the Ideal of "Renaissance Man". His area of Interest are as varying as
+                            Applications of Augmented Reality in Education, Web Usability, Political Philosophy,
+                            Military Strategy, Entrepreneurship, Consumer Psychology and Paintings. He never stops and
+                            keeps learning new things everyday. He recently completed a Certificate program in
+                            Entrepreneurship from Massachusetts Institute of Technology. <br>
+                            Being a storehouse of knowledge and a critical thinker makes him a great trainer for Verbal
+                            Ability. An analytical mind and a knack for numbers makes him the perfect mentor for
+                            quantitative aptitude. His Team stood Second in an all India conference for Aptitude
+                            Trainers. He was given a Cash prize for the same and guess what he did with the cash reward
+                            he received -- bought scores of books on subjects ranging from philosophy to game theory for
+                            his personal library.<br>
+                            It is a long standing debate whether he makes a better trainer of quantitative aptitude or
+                            that of verbal ability. He believes, “If a faculty cannot master both, how can we expect
+                            students to do the same.”<br>
+                            He was one of the Top scorers of Verbal Section in XAT and was the all India Topper in Quant
+                            Section of CMAT (Yes He scored 100/100 in Quant section). <br>
+                            He had a promising career lay ahead of him but he choose to teach instead driven by his
+                            passion for learning.<br>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="fullpage" style="height: 100%;position: relative;
+touch-action: none; transform: translate3d(0px, 0px, 0px); transition: all 700ms ease;">
+    <div class="section fp-section fp-table active">
+        <div class="fp-tableCell" style="height: 662px;">
+            <div class="landing" id="home">
+                <a href="tel:919888870560"><span class="fa fa-phone call"> <span style="">+91 98 88 870560</span></span></a>
+                <div class="social-links-top">
+                    <a href="https://www.facebook.com/BabaAptitude/" target="_blank"><img src="images/fb.png"> </a>
+                    <a href="http://fb.me/msg/babaaptitude" target="_blank"><img src="images/messenger.png"> </a>
+                    <a href="https://www.instagram.com/aptitudebaba/" target="_blank"><img src="images/instagram.png">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UChBa_Sgj_VnJlihX_Z-11tw" target="_blank"><img
+                            src="images/youtube.png" width="30" height="30"> </a>
+                </div>
+                <div class="content" style="height:100vh;overflow:hidden">
+                    <div id="large-header" class="large-header" style="height: 613px;">
+                        <!--Logo of Website-->
+                        <div class="logo"><a href="homepage.php#firstPage">
+                                <img src="images/Aptitude%20Baba%20Text%20with%20Logo%202.png" class="logoMain"
+                                     alt="Gre Key"
+                                     title="Aptitude Baba : Home Page"></a>
+                            <div class="actionButtonWrap">
+                                <a href="#secondPage">
+                                    <div class="actionButton wow bounceInLeft btn1" data-wow-offset="-1000"
+                                         data-wow-delay="0.8s">
+                                        ABOUT US
+                                    </div>
+                                </a>
+                                <a href="#thirdPage">
+                                    <div class="actionButton wow jello" data-wow-delay="1.2s"
+                                         data-wow-offset="-1000"
+                                         style="visibility: visible; animation-delay: 1.2s; animation-name: jello;">
+                                        PROGRAMS
+                                    </div>
+                                </a>
+                                <a href="#fourthPage">
+                                    <div class="actionButton wow bounceInRight btn2" data-wow-offset="-1000"
+                                         data-wow-delay="0.8s">
+                                        CAREERS
+                                    </div>
+                                </a>
+                                <div class="links">
+                                    <a href="#fifthPage">
+                                        <div class="actionButton wow bounceInLeft btn1" data-wow-offset="-1000"
+                                             data-wow-delay="0.8s">
+                                            BABA GYAN
+                                        </div>
+                                    </a>
+                                    <a href="#lastPage">
+                                        <div class="actionButton wow bounceInRight btn2" data-wow-offset="-1000"
+                                             data-wow-delay="0.8s">
+                                            CONTACT US
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="scrollAnima">
+                            <a href="#secondPage" title="Click here to Start">
+                                <img src="images/Red-animated-arrow-down.gif" id="scrollLink" alt="Scroll Image"
+                                     style="cursor:pointer;height:30px;"></a></div>
+                        <canvas id="demo-canvas" style="position: relative;top: 50px;"></canvas>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section fp-section fp-table " id="aboutus">
+        <div class="fp-tableCell" style="height: 662px;">
+            <section class="aboutus">
+                <h1>In a Nutshell...</h1>
+                <h2>Campus Placements SSC BankPO</h2>
+                <h2>or any other Aptitude Exam …</h2>
+                <h3 class="first">Well that’s our Forte …! </h3>
+                <h3 class="second">And that’s it … and we are super awesome at that.</h3>
+                <a data-toggle="modal" data-target="#readmore" title="Read More..">
+                    <div class="readmore" style="cursor: pointer">Read more details About Us > ></div>
+                </a>
+            </section>
+        </div>
+    </div>
+    <div class="section fp-section fp-table" id="programs">
+        <div class="fp-tableCell" style="height: auto;">
+            <section class="programs">
+                <h1>Programs</h1>
+                <div class="container">
+                    <div class="col-sm-12">
+                        <div class="col-sm-4">
+                            <span data-toggle="modal" data-target="#leviathanModal">
+                                <div class="program-one">
+                                    <div class="prog-img text-center">
+                                        <img src="images/Leviathan.png" class="img img-responsive">
+                                    </div>
+                                    <div class="prog-content">
+                                        <h4 class="text-center">LEVIATHAN </h4>
+                                        <p>The Flagship program of Aptitude Baba,is an extended course for evolving
+                                            needs of students preparing for government jobs. </p>
+                                        <div class="viewmore"><a
+                                                href="#">View More</a></div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span data-toggle="modal" data-target="#hellfireModal">
+                                <div class="program-one">
+                                    <div class="prog-img text-center">
+                                        <img src="images/Hellfire.png" class="img img-responsive">
+                                    </div>
+                                    <div class="prog-content">
+                                        <h4 class="text-center">HELLFIRE </h4>
+                                        <p>A fast track program designed to help engineering students prepare for the
+                                            first round of the campus recruitments. </p>
+                                        <div class="viewmore"><a
+                                                href="#">View More</a></div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span data-toggle="modal" data-target="#verbalModal">
+                                <div class="program-one">
+                                    <div class="prog-img text-center">
+                                        <img src="images/Verbal%20Blitz.png" class="img img-responsive">
+                                    </div>
+                                    <div class="prog-content">
+                                        <h4 class="text-center">VERBAL BLITZ </h4>
+                                        <p>A specialized program for students who want to accelerate their performance
+                                            in English and verbal reasoning. </p>
+                                        <div class="viewmore" id="verbal"><a href="#">View More</a></div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="section fp-section fp-table services" id="careers">
+        <div class="fp-tableCell">
+            <section class="careers">
+                <h1>Careers</h1>
+                <div class="container">
+                    <h6 class="text-justify">We are constantly looking for new talent to join our team. The opportunity
+                        to learn
+                        and
+                        grow is immense and
+                        the right candidate will be suitably rewarded.
+
+                        Our compensation and incentive structure is designed to recognize and reward your contribution
+                        and fast
+                        growth is assured for every team member with a good performance. Please email your CV if you fit
+                        the
+                        profile
+                        of the following vacancies.</h6>
+                    <div class="service-grids">
+                        <div class="col-md-3 col-sm-3 col-xs-6 service-grid service-grid1">
+                            <div class="service-grids-icon">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div class="service-grids-text">
+                                <h4>Faculty</h4>
+                                <p class="text-center">Faculty Required for :<br>
+                                    1) Mathematics<br>
+                                    2) Reasoning Ability<br>
+
+                                    1-2 years work experience in a similar position is preferred.</p></div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6 service-grid service-grid2">
+                            <div class="service-grids-icon">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="service-grids-text">
+                                <h4>Counselors / Office manager </h4>
+                                <p class="text-center">Primary job responsibilities include - Handling walk-in
+                                    enquirers,
+                                    maintain
+                                    the front office,
+                                    follow up on all prospects, maintain written enquiry forms and updating
+                                    database.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6 service-grid service-grid3">
+                            <div class="service-grids-icon">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                            </div>
+                            <div class="service-grids-text">
+                                <h4>Marketing Manager</h4>
+                                <p class="text-center">Primary job responsibilities include - <br>
+                                    <b style="font-size: 18px;">.</b> Organizing Seminars and workshops in Colleges and
+                                    Universities.<br>
+                                    <b style="font-size: 18px;">.</b> Maintaining a file on all major Competitors.<br>
+
+                                    <b style="font-size: 18px;">.</b> Overseeing pamphlet distribution and other similar
+                                    marketing jobs.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6 service-grid service-grid4">
+                            <div class="service-grids-icon">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                            </div>
+                            <div class="service-grids-text">
+                                <h4>Animator / Video Editor</h4>
+                                <p class="text-center">The candidate should be good in Premiere Pro and Photoshop.
+                                    Primary Job will be to
+                                    assists in
+                                    developing and updating lectures as well as developing small animations for
+                                    Instagram,
+                                    Youtube
+                                    and Facebook.</p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="resume"><a href="careers.php" target="_blank"><span>Upload your Résumé</span></a></div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+    <div class="section fp-section fp-table " id="graphicalComparison">
+        <div class="fp-tableCell">
+            <section class="graphicalComparison">
+
+                <h1 class="mobile-h1">
+                    <div class="col-sm-2 phone-baba">
+                        <a data-toggle="modal" data-target="#babagyan" title="Rishabh Arora"><img
+                                src="images/founder.jpg"
+                                class="img img-responsive img-circle"></a>
+                    </div>
+                    Baba Gyan
+                </h1>
+                <h1 id="desktop-h1"> Baba Gyan</h1>
+                <div class="container">
+                    <div class="col-sm-12">
+                        <div class="col-sm-6">
+                            <div class="article">
+                                
+                                <h3 class="text-center">
+                                    Laptop                                </h3>
+                                <hr>
+                                <div class="col-sm-12">
+                                    <div class="col-sm-12" style="max-height: 350px; overflow: hidden;">
+                                        <a href="article_detail.php?q=37" target="_blank"><img title="laptop.jpg" class='img img-responsive img-rounded'src="adminpanel/blog_images/blobid1497956589752.jpg" alt="" width="740" height="416" /></a>
+                                    </div>
+                                    <br>
+                                    <p class="text-right"><i>20 June, 2017</i></p>
+                                    <p class="article_link text-right"><a target="_blank"
+                                                                          href="article_detail.php?q=37">More</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                                                    <div class="col-sm-6 col-xs-6">
+                                        <div class="article-small article-small-one">
+                                            <div class="article_head">
+                                                <h4 class="text-center"> SBI-PO’17 Mains Exam Analysis: Re-strategize for</h4>
+                                            </div>
+                                            <hr>
+
+                                            <div class="col-sm-12 col-xs-12 bottom-img"><a
+                                                    href="article_detail.php?q=34"
+                                                    target="_blank"><img style="display: block; margin-left: auto; margin-right: auto;" title="SBI-PO-Mains17-Exam-Analysis-Re-strategize-IBPS-PO-17-prepladder.png" class='img img-responsive img-rounded'src="adminpanel/blog_images/blobid1497873039832.png" alt="" width="629" height="328" /></a>
+                                            </div>
+                                            <br>
+                                            <div class="date_art">
+                                                <p class="text-right "><i>19 June, 2017</i></p>
+                                            </div>
+
+                                            <div class="gyan-right">
+                                                <p class="article_link text-right"><a target="_blank"
+                                                                                      href="article_detail.php?q=34">More</a>
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                                                        <div class="col-sm-6 col-xs-6">
+                                        <div class="article-small article-small-one">
+                                            <div class="article_head">
+                                                <h4 class="text-center"> What is Probationary Officer PO in Banking Sector</h4>
+                                            </div>
+                                            <hr>
+
+                                            <div class="col-sm-12 col-xs-12 bottom-img"><a
+                                                    href="article_detail.php?q=33"
+                                                    target="_blank"><img title="whatispo.png" class='img img-responsive img-rounded'src="adminpanel/blog_images/blobid1497872846871.png" alt="" width="831" height="440" /></a>
+                                            </div>
+                                            <br>
+                                            <div class="date_art">
+                                                <p class="text-right "><i>19 June, 2017</i></p>
+                                            </div>
+
+                                            <div class="gyan-right">
+                                                <p class="article_link text-right"><a target="_blank"
+                                                                                      href="article_detail.php?q=33">More</a>
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                                                </div>
+                            <div class="row desktop-baba">
+                                <div class="col-sm-12 col-xs-7 founder-gyan">
+                                    <a data-toggle="modal" data-target="#babagyan" title="Rishabh Arora">
+                                        <div class="article-founder">
+                                            <div class="col-sm-4 col-xs-6"><img src="images/founder.jpg"
+                                                                                class="img img-responsive img-circle">
+                                            </div>
+                                            <div class="col-sm-8 col-xs-6"><p class="founder-text"><i>Rishabh Arora - An
+                                                        Educator and an Entrepreneur </i></p></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="section fp-section fp-table" id="contactus">
+        <div class="fp-tableCell" style="height: 662px;">
+            <section class="contactus">
+                <h1>Contact Us</h1>
+                <div class="col-sm-6  col-sm-offset-1">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.11713863167!2d74.82557431476299!3d31.63064298133329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391964d62c034e8b%3A0x71f29d044f778236!2sAptitude+Baba!5e0!3m2!1sen!2sin!4v1494827148890"
+                        frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3"><br>
+                    <table id="tb1">
+                        <tr>
+                            <td class="text-right">
+                                <span class="glyphicon glyphicon-envelope" title="Email"></span>
+                            </td>
+                            <td>rishabh.arora.90@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">
+                                <span class="glyphicon glyphicon-phone" title="Contact No."></span>
+                            </td>
+                            <td>+91 98 88 870560</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">
+                                <span class="glyphicon glyphicon-home" title="Email"></span>
+                            </td>
+                            <td>SCF 56, Kabir Park Market
+                                (Opp. Guru Nanak Dev University)
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/BabaAptitude/" target="_blank"><img src="images/fb.png">
+                            </a>
+                            <a href="http://fb.me/msg/babaaptitude" target="_blank"><img src="images/messenger.png">
+                            </a>
+                            <a href="https://www.instagram.com/aptitudebaba/" target="_blank"><img
+                                    src="images/instagram.png"> </a>
+                            <a href="https://www.youtube.com/channel/UChBa_Sgj_VnJlihX_Z-11tw" target="_blank"><img
+                                    src="images/youtube.png" height="30" width="30"> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+
+                <footer style="background-color: black;color:white;">
+                    <h5> &copy; 2017 RISHABH ARORA All Rights Reserved. | Designed & Developed by <a
+                            href="http://vssasr.com/"> VSS </a></h5>
+                </footer>
+            </section>
+        </div>
+    </div>
+
+</div>
+
+<!--  Baba Gyan Modal  -->
+<div class="modal fade scrollable-element" id="babagyan" role="dialog" style="position:absolute;">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title">
+                    ABOUT Founder
+                </h2>
+            </div>
+            <div class="modal-body scrollable-element">
+
+                <div class="col-sm-12 team">
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 team-img"
+                         style="text-align: center;">
+                        <img src="images/founder.jpg" class="img img-responsive img-circle"
+                             alt=" "/>
+                        <h5>Rishabh Arora</h5>
+
+                    </div>
+                    <div class="col-md-10 col-sm-10 ">
+                        <p>A computer science engineer who was given the sobriquet ‘Scientist’ by his schoolmates owing
+                            to his penchant for going in depth of every concept. In his School he was a typical Nerd, he
+                            just loved learning and his love for learning was so great that he never missed school. His
+                            school awarded with a silver medal for a unique achievement- Holding full Attendance for
+                            Four Consecutive years. He holds Leonardo Da Vinci as his role model for learning and
+                            believes in the Ideal of "Renaissance Man". His area of Interest are as varying as
+                            Applications of Augmented Reality in Education, Web Usability, Political Philosophy,
+                            Military Strategy, Entrepreneurship, Consumer Psychology and Paintings. He never stops and
+                            keeps learning new things everyday. He recently completed a Certificate program in
+                            Entrepreneurship from Massachusetts Institute of Technology. <br>
+                            Being a storehouse of knowledge and a critical thinker makes him a great trainer for Verbal
+                            Ability. An analytical mind and a knack for numbers makes him the perfect mentor for
+                            quantitative aptitude. His Team stood Second in an all India conference for Aptitude
+                            Trainers. He was given a Cash prize for the same and guess what he did with the cash reward
+                            he received -- bought scores of books on subjects ranging from philosophy to game theory for
+                            his personal library.<br>
+                            It is a long standing debate whether he makes a better trainer of quantitative aptitude or
+                            that of verbal ability. He believes, “If a faculty cannot master both, how can we expect
+                            students to do the same.”<br>
+                            He was one of the Top scorers of Verbal Section in XAT and was the all India Topper in Quant
+                            Section of CMAT (Yes He scored 100/100 in Quant section). <br>
+                            He had a promising career lay ahead of him but he choose to teach instead driven by his
+                            passion for learning.<br>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- LEVIATHAN Modal -->
+<div id="leviathanModal" class="modal fade scrollable-element" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center">Program LEVIATHAN</h4>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-center">LEVIATHAN </h4>
+                <div class="col-sm-12">
+                    <div class="col-sm-8"><p>The Flagship program of Aptitude Baba,is an extended course designed for
+                        evolving needs of students preparing for government jobs. The program offers more than 160
+                        lecture of 1.5 Hours each, along with 30 Hours of Doubt taking and discussion; it is by far the
+                        most comprehensive program. The program delivers 10 to 12 Lectures every week spread over a
+                        period of about 3 to 4 months.
+                        </p>
+                        <p><b>Program Break Up.</b></p>
+                    </div>
+                    <div class="col-sm-4"><!--<img src="images/Leviathan.png" class="img img-responsive">--></div>
+                </div>
+                <div class="col-sm-12">
+                    <ol>
+                        <li>30 Lectures of Visual Vocabulary covering 1500 frequently used words.</li>
+                        <li>10 Lectures of Reading Comprehensions.</li>
+                        <li>18 Lectures of English Usage.</li>
+                        <li>10 Lectures of Verbal Logic.</li>
+                        <li>50 Lectures of Maths covering 3000+ Questions.</li>
+                        <li> 20 Lectures of Analytical Reasoning.</li>
+                        <li> 20 Lectures of General Knowledge and General Awareness Covering 1000 frequently asked questions .</li>
+                        <li>10 Specialized workshops for Accelerated preparation.</li>
+                        <li> Visual Dictionary – A set of three DVD’s to revise all Words discussed in class.</li>
+                        <li>Book Set – A set of 12 Books Published by Aptitude Baba that cover 8000+ Questions of Maths, Reasoning and English.</li>
+
+                    </ol>
+                    <p>Validity : 1 Year</p>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--  Modal ends here  -->
+
+<!-- HELLFIRE Modal -->
+<div id="hellfireModal" class="modal fade scrollable-element" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center">Program HELLFIRE </h4>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-center">HELLFIRE  </h4>
+                <div class="col-sm-12">
+                    <div class="col-sm-8"><p>A fast track program designed to help engineering students prepare for the first round of the campus recruitments. The program not only provides basic Aptitude Training but also provides specific books and tests for TCS and Nagarro that have been created after deep analysis of previous year campus recruitment papers.
+                        The Program offers 6 to 8 Lectures every week spread over a period of about 2 to 4 months.
+                        </p>
+                        <p><b>Program Break Up.</b></p>
+                    </div>
+                    <div class="col-sm-4"><!--<img src="images/Hellfire.png" class="img img-responsive">--></div>
+                </div>
+                <div class="col-sm-12">
+                    <ol>
+                        <li> 35 Lectures of Mathematics covering 2000 + Questions.</li>
+                        <li>28 Lectures of English Usage.</li>
+                        <li>20 Lectures of Analytical Reasoning.</li>
+                        <li>20 Lectures of GD, Interviews, Extempore and Resume making.</li>
+                        <li> 10 Mock Interviews (Recorded for Student feedback).</li>
+                        <li>  5 Day Workshop for TCS.</li>
+                        <li> Book Set – A set of 8 Books Published by Aptitude Baba that cover 5000+ Questions of Maths, Reasoning and English..</li>
+
+                    </ol>
+                    <p>Validity : 5 Months</p>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--  Modal ends here  -->
+
+
+<!-- VERBAL BLITZ Modal -->
+<div id="verbalModal" class="modal fade scrollable-element" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center">Program VERBAL BLITZ </h4>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-center">VERBAL BLITZ  </h4>
+                <div class="col-sm-12">
+                    <div class="col-sm-8"><p>A specialized program for students who want to accelerate their performance in English and verbal reasoning. The program delivers 10 to 12 Lectures every week spread over a period of about 3 to 4 months.
+                        </p><p><b>Program Break Up.</b></p></div>
+                    <div class="col-sm-4"><!--<img src="images/Verbal%20Blitz.png" class="img img-responsive">--></div>
+                </div>
+                <div class="col-sm-12">
+                    <ol>
+                        <li> 30 Lectures of Visual Vocabulary covering 1500 frequently used words.</li>
+                        <li>10 Lectures of Reading Comprehensions.</li>
+                        <li>18 Lectures of English Usage.</li>
+                        <li>10 Lectures of Verbal Logic.</li>
+                        <li>10 Specialized workshops for Accelerated preparation.</li>
+                        <li> Visual Dictionary – A set of three DVD’s to revise all Words discussed in class.</li>
+                        <li> Book Set – A set of three Books Published by Aptitude Baba that cover all key concepts of Grammar, Reading comprehensions and Verbal Logic.</li>
+
+
+                    </ol>
+                    <p>Validity : 1 Year</p>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--  Modal ends here  -->
+
+<script src="js/plexus.js"></script>
+<script>
+    $(document).ready(function () {
+        //$.noConflict(removeAll);
+        $("#fullpage").fullpage({
+            anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'lastPage'],
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['HomePage', 'About Us', 'Programs', 'Careers', 'Baba Gyan', 'Contact Us'],
+            normalScrollElements: '.scrollable-element'
+        });
+        $.fn.fullpage.setAllowScrolling(true, 'up, down');
+        $.fn.fullpage.setKeyboardScrolling(true);
+        $.fn.fullpage.setScrollingSpeed(1000);
+    });
+</script>
+<script>(new WOW).init();</script>
+
+<script>
+    $(document).ready(function () {
+        /*$("body").on("contextmenu",function(e){
+         //alert("Right Click is disabled");
+         return false;
+         });*/
+    });
+</script></body>
+</html>
